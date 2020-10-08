@@ -1,7 +1,7 @@
 /*body part of page*/
 /*added back ground image */
 body {
-    background-image: url("./assets/images/proto_back_background_1.wide.jpeg");
+    background-image: url("../image/proto_back_background_1.wide.jpeg");
     font-family: 'Merriweather', serif;
   }
 .navbar-container {
