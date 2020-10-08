@@ -6,28 +6,115 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Code Quiz</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <link rel="stylesheet" type="text/css" href="./assest/css/style.css">
+    <link rel="stylesheet" type="text/css" href="./style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather&display=swap" rel="stylesheet">
 </head>
 <body>
+    <!--nav bar start here-->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <div class="container navbar-container mx-0">
             <div class="row w-100">
                 <div class="col-4 col-md-2">
-                    <button type="button" id="highscore-button" class="btn btn-primary">View High Scores</button> 
+                    <button type="button" id="highscore-button" class="btn btn-info">View High Scores</button> 
                 </div>
-                <div class="col-3 col-md-7"></div>
-                <div class="col-5 col-md-3">
+                <div class="col-3 col-md-6"></div>
+                <div class="col-5 col-md-4">
                     <form>
                         <div class="form-group row">
                             <label for="time-remaining" class="col-sm-7 col-form-label time">Time Remaining</label>
-                            <div class="col-sm-5">
+                            <div class="col-sm-4">
                                 <input type="number" readonly class="form-control" id="time-remaining" placeholder="0">
-                            </div>
+                            </div>    
                         </div>
                     </form>
                 </div>
             </div>
         </div>
     </nav>
+    <!--nav bar end here-->
+    <!--landing-container start here-->
+    <article id="landing-container" class="container">
+        <div class="row mb-3">
+            <div class="col-12 text-center code">
+                <h1>Code Quiz</h1>
+            </div>
+        </div>
+        <div class="row mb-3">
+            <div class="col-12 text-center">
+                <p>Answer all the questions before the timer runs out!  Each wrong answer will subtract 15 seconds from the timer.  The more time left on the clock when all questions are answered, the higher your score!</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12 text-center">
+                <button id="start-button" type="button" class="btn btn-secondary btn-lg">Start Quiz</button>
+            </div>
+        </div>
+    </article>
+    <!--landing-container end here-->
+    <!--quiz-container start here-->
+    <div id="quiz-container" class="container d-none">
+    </div>
+    <!--quiz-container end here-->
+    <!--final-container start here-->
+    <article id="final-container" class="container d-none">
+        <div class="row">
+            <div class="col-12 text-center">
+                <form>
+                    <div class="form-group row">
+                        <label for="final-score" class="col-sm-7 col-form-label">Final Score</label>
+                        <div class="col-sm-5">
+                            <input type="number" readonly class="form-control" id="final-score" placeholder="0">
+                        </div>
+                    </div>
+                </form>
+                <form>
+                    <div class="form-group">
+                      <label for="initials-entry">Initials</label>
+                      <input type="text" class="form-control" id="initials-entry" placeholder="Enter initials">
+                    </div>
+                    <button id="submit-initials" type="button" class="btn btn-primary">Submit</button>
+                </form>
+            </div>
+        </div>
+    </article>
+    <!--final-container end here-->
+    <!--highscore-container start here-->
+    <article id="highscore-container" class="container d-none">
+        <div class="row">
+            <div class="col-2"></div>
+            <div id="highscore-table" class="col-8">
+                <div class="row">
+                    <div class="col-12 text-center mt-5">
+                        <h2>High Scores</h2>
+                    </div>
+                </div>
+            </div>
+            <div class="col-2"></div>
+        </div>
+        <div class="row">
+            <div class="col-2"></div>
+            <div id="highscore-table" class="col-8">
+                <div class="row">
+                    <div class="col-12 text-center mt-5">
+                        <button id="play-button" type="button" class="btn btn-dark btn-lg">Play Again</button>
+                        <button  id="clear-button" class = "btn btn-dark btn-lg" >Clear Scores</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-2"></div>
+        </div>
+    </article>
+    <!--highscore-container end here-->
+    <!--footer part of page-->
+    <footer class="fixed-bottom footer">
+        <p class="text-center mx-4">
+            &copy; Copyright 2020 Parth Patel
+            <!--my social media links-->
+            <a  href="https://github.com/parth167"><img class="icon" src="./assets/images/github-128.png" alt="GitHub Profile"></a>
+            <a  href="https://www.linkedin.com/in/parth-patel-4725381b5/ "><img class="icon" src="./assets/images/square-linkedin-128.png" alt="LinkedIn Profile"></a>
+        </p>
+    </footer>
+    <script src="./questions.js"></script>
+    <script src="./script.js"></script>
 </body>
 </html>
