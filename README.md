@@ -3,7 +3,7 @@
 1. For this repository, I have created a Javascript Code Quiz. This quiz asks the user a series of questions about javascript and times how long it takes to answer them all. The application combines the HTML, CSS, and now Javascript tools we have been covering in the Bootcamp
 
 * URL for the live app is here:
-
+https://parth167.github.io/code_quiz_master/
 
 # Project description
 
