@@ -204,8 +204,7 @@ function initQuiz() {
         });
         clearButtonEl.addEventListener("click",clearScore);
         function clearScore() {
-            localStorage.setItem("highscore", "");
-            localStorage.setItem("highscoreName",  "");
+            localStorage.removeItem('scores');
         }
     }
     
